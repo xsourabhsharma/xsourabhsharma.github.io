@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sourabh Sharma | xsourabhsharma.io</title>
+    <meta name="description"
+        content="Sourabh Sharma. Self-taught developer from Haryana, India. Building AI-powered tools and web apps with Python and JavaScript.">
+    <meta name="keywords"
+        content="Sourabh Sharma, developer, Python, AI, ML, web developer, Haryana, India, xsourabhsharma">
+    <meta name="author" content="Sourabh Sharma">
+
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Sourabh Sharma | Developer & Builder">
+    <meta property="og:description" content="Self-taught developer from Haryana, India building AI tools and web apps.">
+    <meta property="og:image" content="https://xsourabhsharma.io/og-image.jpg">
+    <meta property="og:url" content="https://xsourabhsharma.io">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sourabh Sharma | Developer & Builder">
+    <meta name="twitter:description" content="Self-taught developer from Haryana, India. Python, AI/ML, Web Dev.">
+    <meta name="twitter:image" content="https://xsourabhsharma.io/og-image.jpg">
+    <meta name="twitter:site" content="@xsourabhsharma">
+
+    <link rel="canonical" href="https://xsourabhsharma.io">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23111'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-weight='900' font-size='16' fill='white'%3EXS%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Premium Tech Cursor -->
+    <div class="cursor" id="cursor">
+        <span class="cursor__text" id="cursorText"></span>
+    </div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <a href="#" class="header__logo">
+                <svg class="logo-svg" viewBox="0 0 40 40" width="40" height="40">
+                    <rect width="40" height="40" rx="6" fill="#111" />
+                    <text x="20" y="27" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="900"
+                        font-size="18" fill="white">XS</text>
+                </svg>
+                <span class="logo-text">SOURABH<br>SHARMA</span>
+            </a>
+            <nav class="header__nav" id="headerNav">
+                <a href="#hero" class="header__link active">HOME</a>
+                <a href="#about" class="header__link">ABOUT</a>
+                <a href="#skills" class="header__link">SKILLS</a>
+                <a href="#interests" class="header__link">INTERESTS</a>
+                <a href="#projects" class="header__link">PROJECTS</a>
+                <a href="#socials" class="header__link">CONNECT</a>
+            </nav>
+            <button class="header__toggle" id="headerToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="hero__inner">
+            <div class="hero__text">
+                <div class="hero__greeting reveal" style="--d:.1s">
+                    <span class="hero__line"></span>
+                    <span>Hey, I'm</span>
+                </div>
+                <h1 class="hero__name reveal" style="--d:.3s">
+                    Sourabh<br>Sharma<span class="dot">.</span>
+                </h1>
+                <p class="hero__tagline reveal" style="--d:.55s">
+                    I build AI-powered tools and web apps using Python and JavaScript.
+                    Self-taught from Haryana, India. I turn ideas into working software, one project at a time.
+                </p>
+                <p class="hero__sub reveal" style="--d:.75s">
+                    Self-taught. 20 years old. Writing code since I was 18. The internet was my classroom.
+                </p>
+                <div class="hero__actions reveal" style="--d:.9s">
+                    <a href="#socials" class="btn btn--primary magnetic">My Profiles <i
+                            class="fas fa-arrow-down"></i></a>
+                    <a href="#about" class="btn btn--ghost magnetic">About Me &rarr;</a>
+                    <a href="./Sourabh_Sharma_Resume.pdf" download="Sourabh_Sharma_Resume.pdf"
+                        class="btn btn--ghost magnetic">Download Resume <i class="fas fa-arrow-down"></i></a>
+                </div>
+            </div>
+            <div class="hero__portrait reveal" style="--d:.5s">
+                <div class="hero__frame tilt-card">
+                    <img src="img/sourabh.jpg" alt="Sourabh Sharma, self-taught developer from Haryana, India"
+                        class="hero__img">
+                    <div class="hero__label-top"><i class="fas fa-terminal"></i> DEVELOPER</div>
+                </div>
+                <div class="hero__frame-accent"></div>
+            </div>
+        </div>
+        <div class="hero__scroll" id="heroScroll">
+            <div class="hero__scroll-track">
+                <div class="hero__scroll-ball"></div>
+            </div>
+            <span>SCROLL DOWN</span>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+        <div class="section__header">
+            <span class="section__num reveal">01</span>
+            <h2 class="section__title reveal" style="--d:.08s">About Me</h2>
+            <div class="section__line reveal" style="--d:.15s"></div>
+        </div>
+        <div class="about__layout">
+            <div class="about__text reveal">
+                <p>I started coding at 18 because I wanted to build things, not just use them. Two years later, I spend
+                    most of my time writing <strong>Python scripts</strong>, building <strong>web apps</strong>, and
+                    diving deeper into <strong>machine learning</strong>.</p>
+                <p>No bootcamp. No mentor. I learned through docs, open-source code, and breaking things until they
+                    worked. That process taught me more than any curriculum could.</p>
+                <p>When I'm not writing code, I'm reading about AI research, studying market patterns, or figuring out
+                    how to build something new. I treat every project like a puzzle worth solving.</p>
+                <p>Based in <strong>Haryana, India</strong>. I speak <strong>English</strong> and
+                    <strong>Hindi</strong>.
+                </p>
+            </div>
+            <div class="about__facts reveal" style="--d:.15s">
+                <div class="fact">
+                    <div class="fact__icon"><i class="fas fa-code"></i></div>
+                    <div><span class="fact__label">Focus</span><strong>Full-Stack &amp; AI/ML</strong></div>
+                </div>
+                <div class="fact">
+                    <div class="fact__icon"><i class="fas fa-terminal"></i></div>
+                    <div><span class="fact__label">Experience</span><strong>2+ Years Self-taught</strong></div>
+                </div>
+                <div class="fact">
+                    <div class="fact__icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div><span class="fact__label">Location</span><strong>Haryana, India</strong></div>
+                </div>
+                <div class="fact">
+                    <div class="fact__icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div><span class="fact__label">Status</span><strong>Student &amp; Builder</strong></div>
+                </div>
+                <div class="fact">
+                    <div class="fact__icon"><i class="fas fa-globe"></i></div>
+                    <div><span class="fact__label">Website</span><strong>xsourabhsharma.io</strong></div>
+                </div>
+                <a href="./Sourabh_Sharma_Resume.pdf" download="Sourabh_Sharma_Resume.pdf" class="fact fact--download">
+                    <div class="fact__icon"><i class="fas fa-file-arrow-down"></i></div>
+                    <div><span class="fact__label">Resume</span><strong>Download CV</strong></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section section--tinted" id="skills">
+        <div class="section__header">
+            <span class="section__num reveal">02</span>
+            <h2 class="section__title reveal" style="--d:.08s">What I Work With</h2>
+            <div class="section__line reveal" style="--d:.15s"></div>
+        </div>
+        <p class="section__intro reveal">These are the tools in my stack right now. Always expanding, always shipping.
+        </p>
+        <div class="skills__grid">
+            <div class="skill tilt-card reveal" style="--d:.05s">
+                <div class="skill__icon"><i class="fab fa-python"></i></div>
+                <h3>Python</h3>
+                <span class="skill__level">Intermediate</span>
+                <p>My favourite language. I use it for scripts, automation, and messing around with data. It just makes
+                    things easy to build.</p>
+            </div>
+            <div class="skill tilt-card reveal" style="--d:.1s">
+                <div class="skill__icon"><i class="fab fa-js-square"></i></div>
+                <h3>JavaScript</h3>
+                <span class="skill__level">Beginner to Intermediate</span>
+                <p>I use it for web stuff mostly. Still learning the newer frameworks but I can get things working and
+                    that's what matters.</p>
+            </div>
+            <div class="skill tilt-card reveal" style="--d:.15s">
+                <div class="skill__icon"><i class="fas fa-microchip"></i></div>
+                <h3>C++</h3>
+                <span class="skill__level">Beginner</span>
+                <p>This one makes me think harder. Data structures and algorithms, competitive problems. It keeps my
+                    brain sharp.</p>
+            </div>
+            <div class="skill tilt-card reveal" style="--d:.2s">
+                <div class="skill__icon"><i class="fab fa-java"></i></div>
+                <h3>Java</h3>
+                <span class="skill__level">Beginner</span>
+                <p>OOP clicked for me because of Java. It's heavy, sure. But it taught me how to structure code the
+                    right way.</p>
+            </div>
+            <div class="skill tilt-card reveal" style="--d:.08s">
+                <div class="skill__icon"><i class="fab fa-html5"></i></div>
+                <h3>Web Dev</h3>
+                <span class="skill__level">Intermediate</span>
+                <p>HTML, CSS, responsive layouts. I enjoy making things that look clean and work properly on every
+                    screen size.</p>
+            </div>
+            <div class="skill tilt-card reveal" style="--d:.13s">
+                <div class="skill__icon"><i class="fas fa-robot"></i></div>
+                <h3>AI &amp; ML</h3>
+                <span class="skill__level">Beginner</span>
+                <p>This is what excites me the most. I read papers, watch lectures, run notebooks. I'm still early but
+                    I'm completely hooked.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INTERESTS ===== -->
+    <section class="section" id="interests">
+        <div class="section__header">
+            <span class="section__num reveal">03</span>
+            <h2 class="section__title reveal" style="--d:.08s">When I'm Not Coding</h2>
+            <div class="section__line reveal" style="--d:.15s"></div>
+        </div>
+        <div class="interests__grid">
+            <article class="interest tilt-card reveal" style="--d:.1s">
+                <div class="interest__icon"><i class="fas fa-video"></i></div>
+                <h3>Content Creation</h3>
+                <p>I like sharing what I learn. Breaking down a concept, showing how I built something, or just
+                    thinking out loud about tech. It helps me learn better and connect with people who are
+                    into the same stuff.</p>
+            </article>
+            <article class="interest tilt-card reveal" style="--d:.2s">
+                <div class="interest__icon"><i class="fas fa-book-open"></i></div>
+                <h3>Books &amp; Self Growth</h3>
+                <p>I wasn't always into reading, but once I started I couldn't stop. Mostly stuff about
+                    self-improvement, tech, and money. Every good book I've read has changed how I look at things. Small
+                    ideas add up over time and completely shift your perspective.</p>
+            </article>
+            <article class="interest tilt-card reveal" style="--d:.3s">
+                <div class="interest__icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Investing &amp; Markets</h3>
+                <p>I've been looking into crypto and stocks for a while. I'm not an expert at all, I'm just learning.
+                    But I enjoy studying charts, following trends, and trying to understand how money moves. It's like
+                    problem solving but with real stakes.</p>
+            </article>
+        </div>
+        <blockquote class="quote reveal">
+            I think in years, not days. Every book I read, every line of code I write, every mistake I make. It all adds
+            up somewhere. I'm just trying to make sure it adds up to something meaningful.
+            <cite class="quote__attribution">- Sourabh Sharma</cite>
+        </blockquote>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section section--tinted" id="projects">
+        <div class="section__header">
+            <span class="section__num reveal">04</span>
+            <h2 class="section__title reveal" style="--d:.08s">Projects &amp; Code</h2>
+            <div class="section__line reveal" style="--d:.15s"></div>
+        </div>
+        <div class="projects__grid">
+            <div class="project-card tilt-card reveal" style="--d:.08s">
+                <div class="project-card__header">
+                    <div class="project-card__num">01</div>
+                    <a href="https://github.com/xsourabhsharma" target="_blank" rel="noopener noreferrer"
+                        class="project-card__github"><i class="fab fa-github"></i></a>
+                </div>
+                <h3>AI Chatbot Engine</h3>
+                <p>A conversational AI chatbot built from scratch using Python. Handles natural language queries,
+                    context
+                    retention, and pluggable response modules. Trained on custom datasets for domain-specific answers.
+                </p>
+                <div class="project-card__tags">
+                    <span>Python</span><span>NLP</span><span>Flask</span><span>OpenAI API</span>
+                </div>
+                <a href="https://github.com/xsourabhsharma" target="_blank" rel="noopener noreferrer"
+                    class="project-card__link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="project-card tilt-card reveal" style="--d:.16s">
+                <div class="project-card__header">
+                    <div class="project-card__num">02</div>
+                    <a href="https://github.com/xsourabhsharma" target="_blank" rel="noopener noreferrer"
+                        class="project-card__github"><i class="fab fa-github"></i></a>
+                </div>
+                <h3>Portfolio Website</h3>
+                <p>This very website you're looking at. Custom-coded with vanilla HTML, CSS, and JS. Features a premium
+                    tech cursor, 3D tilt cards, smooth scroll reveals, and responsive design across all screens.</p>
+                <div class="project-card__tags">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI/UX</span>
+                </div>
+                <a href="https://github.com/xsourabhsharma" target="_blank" rel="noopener noreferrer"
+                    class="project-card__link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="project-card tilt-card reveal" style="--d:.24s">
+                <div class="project-card__header">
+                    <div class="project-card__num">03</div>
+                    <a href="https://github.com/xsourabhsharma" target="_blank" rel="noopener noreferrer"
+                        class="project-card__github"><i class="fab fa-github"></i></a>
+                </div>
+                <h3>Crypto Price Tracker</h3>
+                <p>A real-time cryptocurrency dashboard that pulls live data from multiple APIs. Features price alerts,
+                    historical charts, portfolio tracking, and a clean minimal interface for quick market reads.</p>
+                <div class="project-card__tags">
+                    <span>Python</span><span>REST API</span><span>JavaScript</span><span>Charts</span>
+                </div>
+                <a href="https://github.com/xsourabhsharma" target="_blank" rel="noopener noreferrer"
+                    class="project-card__link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="projects__cta reveal">
+            <a href="https://github.com/xsourabhsharma" target="_blank" rel="noopener noreferrer"
+                class="btn btn--primary magnetic"><i class="fab fa-github"></i> See All on GitHub</a>
+            <p class="note"></p>
+        </div>
+    </section>
+
+    <!-- ===== SOCIALS ===== -->
+    <section class="section" id="socials">
+        <div class="section__header">
+            <span class="section__num reveal">05</span>
+            <h2 class="section__title reveal" style="--d:.08s">Find Me Online</h2>
+            <div class="section__line reveal" style="--d:.15s"></div>
+        </div>
+        <p class="section__intro reveal">I'm active on most of these platforms. If you want to talk tech, work on
+            something together, or just say hi, feel free to reach out. I always reply.</p>
+        <div class="socials__grid">
+            <a href="https://github.com/xsourabhsharma" target="_blank" rel="noopener noreferrer"
+                class="social magnetic reveal"><i class="fab fa-github"></i>
+                <div><strong>GitHub</strong><span>xsourabhsharma</span></div><i
+                    class="fas fa-arrow-up-right-from-square social__arrow"></i>
+            </a>
+            <a href="https://www.youtube.com/@xsourabhsharma" target="_blank" rel="noopener noreferrer"
+                class="social magnetic reveal"><i class="fab fa-youtube"></i>
+                <div><strong>YouTube</strong><span>@xsourabhsharma</span></div><i
+                    class="fas fa-arrow-up-right-from-square social__arrow"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/xsourabhsharma" target="_blank" rel="noopener noreferrer"
+                class="social magnetic reveal"><i class="fab fa-linkedin-in"></i>
+                <div><strong>LinkedIn</strong><span>Sourabh Sharma</span></div><i
+                    class="fas fa-arrow-up-right-from-square social__arrow"></i>
+            </a>
+            <a href="https://x.com/xsourabhsharma" target="_blank" rel="noopener noreferrer"
+                class="social magnetic reveal"><i class="fab fa-x-twitter"></i>
+                <div><strong>X (Twitter)</strong><span>@xsourabhsharma</span></div><i
+                    class="fas fa-arrow-up-right-from-square social__arrow"></i>
+            </a>
+            <a href="https://instagram.com/instasourabhsharma" target="_blank" rel="noopener noreferrer"
+                class="social magnetic reveal"><i class="fab fa-instagram"></i>
+                <div><strong>Instagram</strong><span>@instasourabhsharma</span></div><i
+                    class="fas fa-arrow-up-right-from-square social__arrow"></i>
+            </a>
+            <a href="https://twitch.tv/xsourabhsharma" target="_blank" rel="noopener noreferrer"
+                class="social magnetic reveal"><i class="fab fa-twitch"></i>
+                <div><strong>Twitch</strong><span>xsourabhsharma</span></div><i
+                    class="fas fa-arrow-up-right-from-square social__arrow"></i>
+            </a>
+            <a href="https://kick.com/xsourabhsharma" target="_blank" rel="noopener noreferrer"
+                class="social magnetic reveal"><i class="fas fa-play-circle"></i>
+                <div><strong>Kick</strong><span>xsourabhsharma</span></div><i
+                    class="fas fa-arrow-up-right-from-square social__arrow"></i>
+            </a>
+            <a href="https://discord.gg/xsourabhsharma" target="_blank" rel="noopener noreferrer"
+                class="social magnetic reveal"><i class="fab fa-discord"></i>
+                <div><strong>Discord</strong><span>xsourabhsharma</span></div><i
+                    class="fas fa-arrow-up-right-from-square social__arrow"></i>
+            </a>
+            <a href="https://t.me/xsourabhsharma" target="_blank" rel="noopener noreferrer"
+                class="social magnetic reveal"><i class="fab fa-telegram-plane"></i>
+                <div><strong>Telegram</strong><span>@xsourabhsharma</span></div><i
+                    class="fas fa-arrow-up-right-from-square social__arrow"></i>
+            </a>
+            <a href="https://snapchat.com/add/xsourabhsharma" target="_blank" rel="noopener noreferrer"
+                class="social magnetic reveal"><i class="fab fa-snapchat-ghost"></i>
+                <div><strong>Snapchat</strong><span>xsourabhsharma</span></div><i
+                    class="fas fa-arrow-up-right-from-square social__arrow"></i>
+            </a>
+        </div>
+
+
+        <!-- Contact form -->
+        <form class="contact-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <h3 class="contact-form__title">Send Me a Message</h3>
+            <div class="contact-form__row">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="your@email.com" required>
+            </div>
+            <input type="text" name="subject" placeholder="What's this about?">
+            <textarea name="message" placeholder="Write your message here..." rows="5" required></textarea>
+            <button type="submit" class="btn btn--primary magnetic">Send Message <i
+                    class="fas fa-arrow-right"></i></button>
+            <p class="note">Or email me directly at <a href="mailto:hello@xsourabhsharma.io">hello@xsourabhsharma.io</a>
+            </p>
+        </form>
+
+        <div class="email-bar reveal">
+            <i class="fas fa-envelope"></i>
+            <div class="email-bar__body">
+                <span class="email-bar__label">Drop me an email</span>
+                <a href="mailto:hello@xsourabhsharma.io" class="email-bar__address">hello@xsourabhsharma.io</a>
+            </div>
+            <a href="mailto:hello@xsourabhsharma.io" class="btn btn--white magnetic">Say Hello <i
+                    class="fas fa-paper-plane"></i></a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer__brand" aria-hidden="true">XSOURABH<br>SHARMA</div>
+        <div class="footer__bottom">
+            <span>&copy; 2026 Sourabh Sharma &middot; xsourabhsharma.io</span>
+            <nav class="footer__links">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#interests">Interests</a>
+                <a href="#projects">Projects</a>
+                <a href="#socials">Connect</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
