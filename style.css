@@ -15,6 +15,8 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 72px;
     font-size: 16px;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -23,6 +25,7 @@ body {
     color: #111;
     line-height: 1.7;
     overflow-x: hidden;
+    width: 100%;
     -webkit-font-smoothing: antialiased;
     cursor: none;
 }
@@ -1425,6 +1428,11 @@ button {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .projects__grid,
+    .interests__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .about__layout {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -1534,5 +1542,13 @@ button {
 
     .hero__frame-accent {
         display: none;
+    }
+
+    .section {
+        padding: 50px 16px;
+    }
+
+    .project-card, .interest, .skill {
+        padding: 24px 16px;
     }
 }
