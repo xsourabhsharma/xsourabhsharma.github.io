@@ -1,57 +1,38 @@
-/* ===========================================
-   SOURABH SHARMA — xsourabhsharma.com
-   v9.0 — PREMIUM TECH CURSOR EDITION
-   =========================================== */
-
 document.addEventListener('DOMContentLoaded', () => {
 
     const isDesktop = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
 
-    /* ═══════════════════════════════════════════
-       PREMIUM TECH CURSOR ENGINE
-       - Smooth LERP following
-       - Mix-blend-mode difference (inverts on content)
-       - Magnetic pull on interactive elements
-       - Contextual text labels (View, Click, etc.)
-       - Velocity-based skew/squeeze
-       - Click shrink
-       - Viewport enter/leave
-       ═══════════════════════════════════════════ */
     const cursorRing = document.getElementById('cursor');
     const cursorDot = document.getElementById('cursorDot');
     const cursorText = document.getElementById('cursorText');
 
     if (isDesktop && cursorRing && cursorDot) {
-        // Mouse position (instant)
+        
         let mx = -80, my = -80;
-        // Ring position (lerped)
+        
         let rx = -80, ry = -80;
-        // Previous ring position (for velocity)
+        
         let prx = -80, pry = -80;
 
-        const LERP_RING = 0.12;  // Smooth follow speed
-        const LERP_DOT = 1;     // Dot follows instantly
+        const LERP_RING = 0.12;  
+        const LERP_DOT = 1;     
 
-        // Track mouse position
         document.addEventListener('mousemove', e => {
             mx = e.clientX;
             my = e.clientY;
         });
 
-        // Animation loop
         function cursorLoop() {
-            // Lerp the ring
+            
             rx += (mx - rx) * LERP_RING;
             ry += (my - ry) * LERP_RING;
 
-            // Velocity for skew effect
             const vx = mx - prx;
             const vy = my - pry;
             const speed = Math.sqrt(vx * vx + vy * vy);
             const angle = Math.atan2(vy, vx) * (180 / Math.PI);
             const squeeze = Math.min(speed * 0.15, 0.4);
 
-            // Apply ring transform with velocity-based squeeze
             const scaleX = 1 + squeeze;
             const scaleY = 1 - squeeze * 0.5;
             cursorRing.style.left = rx + 'px';
@@ -63,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 cursorRing.style.transform = 'translate(-50%, -50%) rotate(0deg) scale(1, 1)';
             }
 
-            // Dot follows mouse instantly
             cursorDot.style.left = mx + 'px';
             cursorDot.style.top = my + 'px';
 
@@ -74,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         cursorLoop();
 
-        // ── Cursor states for different elements ──
         const cursorTargets = [
             { selector: 'a[href^="http"], a[target="_blank"]', className: 'hovering-link', text: 'View' },
             { selector: 'a[href^="#"]', className: 'hovering', text: '' },
@@ -108,7 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // ── Click shrink effect ──
         document.addEventListener('mousedown', () => {
             cursorRing.classList.add('clicking');
         });
@@ -116,7 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
             cursorRing.classList.remove('clicking');
         });
 
-        // ── Viewport enter/leave ──
         document.addEventListener('mouseleave', () => {
             cursorRing.classList.add('hidden');
             cursorDot.classList.add('hidden');
@@ -126,7 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
             cursorDot.classList.remove('hidden');
         });
 
-        // ── MAGNETIC PULL on buttons ──
         document.querySelectorAll('.magnetic').forEach(btn => {
             btn.addEventListener('mousemove', e => {
                 const rect = btn.getBoundingClientRect();
@@ -144,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
     } else {
-        // Fallback: hide cursor elements and restore default cursor
+        
         if (cursorRing) cursorRing.style.display = 'none';
         if (cursorDot) cursorDot.style.display = 'none';
         document.body.style.cursor = 'auto';
@@ -153,13 +129,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ═══ HEADER SCROLL ═══ */
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
         header.classList.toggle('scrolled', window.scrollY > 30);
     }, { passive: true });
 
-    /* ═══ MOBILE MENU ═══ */
     const toggle = document.getElementById('headerToggle');
     const nav = document.getElementById('headerNav');
     toggle.addEventListener('click', () => {
@@ -175,7 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* ═══ SMOOTH SCROLL ═══ */
     document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', e => {
             e.preventDefault();
@@ -184,7 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* ═══ SCROLL REVEAL ═══ */
     const io = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -195,7 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-    /* ═══ ACTIVE NAV ═══ */
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.header__link');
     window.addEventListener('scroll', () => {
@@ -204,7 +175,6 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${current}`));
     }, { passive: true });
 
-    /* ═══ SCROLL INDICATOR HIDE ═══ */
     const scrollEl = document.getElementById('heroScroll');
     if (scrollEl) {
         window.addEventListener('scroll', () => {
@@ -212,7 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     }
 
-    /* ═══ 3D TILT ═══ */
     if (isDesktop) {
         document.querySelectorAll('.tilt-card').forEach(card => {
             card.style.transition = 'transform .35s cubic-bezier(.34,1.56,.64,1)';
@@ -232,7 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ═══ PARALLAX SECTIONS ═══ */
     if (isDesktop) {
         const parallaxEls = document.querySelectorAll('.hero__frame-accent, .section__num');
         window.addEventListener('scroll', () => {

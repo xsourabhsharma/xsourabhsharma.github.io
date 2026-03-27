@@ -1,8 +1,8 @@
 # Hey, I'm Sourabh 👋
 
-I'm a 20-year-old self-taught developer from Haryana, India. I started coding at 18 because I wanted to build things, not just use them. Two years in, I mostly write Python and JavaScript, and I'm getting deeper into AI/ML.
+I'm a 20-year-old self-taught developer from Haryana, India. I write code because I love building things from scratch, breaking them, and figuring out how to put them back together. Right now, my main focus is on Python, JavaScript, and diving deep into AI/ML.
 
-No bootcamp. I learned through documentation, open-source code, and a lot of late nights breaking stuff until it worked.
+I didn't do a bootcamp. Everything I know comes from reading docs, breaking open-source projects, and late nights trying to make things work. I'm all about writing clean, efficient, and actual human-feeling code.
 
 ## What I'm working with
 

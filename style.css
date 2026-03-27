@@ -1,8 +1,3 @@
-/* ===========================================
-   SOURABH SHARMA — xsourabhsharma.com
-   v9.0 — PREMIUM POLISHED EDITION
-   =========================================== */
-
 *,
 *::before,
 *::after {
@@ -45,7 +40,6 @@ button {
     cursor: none;
 }
 
-/* ── PREMIUM TECH CURSOR ── */
 .cursor {
     position: fixed;
     pointer-events: none;
@@ -72,7 +66,6 @@ button {
     backface-visibility: hidden;
 }
 
-/* Hovering interactive elements */
 .cursor.hovering {
     width: 80px;
     height: 80px;
@@ -80,7 +73,6 @@ button {
     border-width: 2px;
 }
 
-/* Hovering links with external arrows */
 .cursor.hovering-link {
     width: 90px;
     height: 90px;
@@ -88,21 +80,18 @@ button {
     border-width: 2px;
 }
 
-/* Clicking state */
 .cursor.clicking {
     width: 30px;
     height: 30px;
     border-width: 3px;
 }
 
-/* Hidden when leaving viewport */
 .cursor.hidden {
     opacity: 0;
     width: 10px;
     height: 10px;
 }
 
-/* Cursor text label */
 .cursor__text {
     font-family: 'Inter', sans-serif;
     font-size: .55rem;
@@ -123,7 +112,6 @@ button {
     transform: scale(1);
 }
 
-/* Dot cursor */
 .cursor-dot {
     position: fixed;
     pointer-events: none;
@@ -153,7 +141,6 @@ button {
     opacity: 0;
 }
 
-/* ── SHIMMER KEYFRAMES ── */
 @keyframes shimmer {
     0% {
         background-position: -200% center;
@@ -202,7 +189,6 @@ button {
     }
 }
 
-/* ── BUTTONS ── */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -267,7 +253,6 @@ button {
     box-shadow: 0 6px 20px rgba(255, 255, 255, .15);
 }
 
-/* ─── HEADER ─── */
 .header {
     position: fixed;
     inset: 0 0 auto;
@@ -404,7 +389,6 @@ button {
     transform: translateY(-50%) rotate(-45deg);
 }
 
-/* ─── HERO ─── */
 .hero {
     min-height: 100vh;
     margin-top: 72px;
@@ -542,7 +526,6 @@ button {
     flex-wrap: wrap;
 }
 
-/* Portrait frame */
 .hero__portrait {
     position: relative;
 }
@@ -614,7 +597,6 @@ button {
     border-color: #bbb;
 }
 
-/* Scroll indicator */
 .hero__scroll {
     position: absolute;
     bottom: 28px;
@@ -660,7 +642,6 @@ button {
     }
 }
 
-/* ─── SECTIONS ─── */
 .section {
     padding: 110px 48px;
 }
@@ -711,7 +692,6 @@ button {
     line-height: 1.8;
 }
 
-/* ─── ABOUT ─── */
 .about__layout {
     max-width: 1100px;
     margin: 0 auto;
@@ -786,7 +766,6 @@ button {
     font-size: .85rem;
 }
 
-/* ─── SKILLS ─── */
 .skills__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -877,7 +856,6 @@ button {
     line-height: 1.7;
 }
 
-/* ─── INTERESTS ─── */
 .interests__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -987,7 +965,6 @@ button {
     margin-top: 12px;
 }
 
-/* ─── PROJECTS ─── */
 .projects__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1134,7 +1111,6 @@ button {
     margin: 0 auto;
 }
 
-/* Muted italic note */
 .note {
     font-size: .72rem;
     color: #aaa;
@@ -1151,7 +1127,6 @@ button {
     color: #111;
 }
 
-/* Download CV fact */
 .fact--download {
     text-decoration: none;
     cursor: none;
@@ -1165,7 +1140,6 @@ button {
     transform: translateX(6px);
 }
 
-/* ─── CONTACT FORM ─── */
 .contact-form {
     max-width: 700px;
     margin: 32px auto;
@@ -1217,7 +1191,6 @@ button {
     resize: vertical;
 }
 
-/* ─── SOCIALS ─── */
 .socials__grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -1325,7 +1298,6 @@ button {
     opacity: .7;
 }
 
-/* ─── FOOTER ─── */
 .footer {
     padding: 80px 48px 30px;
     background: #fff;
@@ -1381,7 +1353,6 @@ button {
     color: #111;
 }
 
-/* ─── REVEAL ANIMATIONS ─── */
 .reveal {
     opacity: 0;
     transform: translateY(36px);
@@ -1394,9 +1365,6 @@ button {
     transform: translateY(0);
 }
 
-/* ─── RESPONSIVE ─── */
-
-/* Prevent horizontal overflow globally */
 html, body {
     overflow-x: hidden;
     max-width: 100vw;
@@ -1576,7 +1544,6 @@ html, body {
         font-size: .82rem;
     }
 
-    /* Better touch targets for project links */
     .project-card__link {
         padding: 8px 0;
         font-size: .68rem;
@@ -1586,14 +1553,12 @@ html, body {
         gap: 16px;
     }
 
-    /* Better readability for section intro */
     .section__intro {
         font-size: .84rem;
         max-width: 100%;
         text-align: left;
     }
 
-    /* Improve about facts on tablet */
     .about__facts {
         gap: 4px;
     }
@@ -1606,7 +1571,6 @@ html, body {
         font-size: .8rem;
     }
 
-    /* Hero scroll indicator hidden on mobile */
     .hero__scroll {
         display: none;
     }
@@ -1652,7 +1616,6 @@ html, body {
         display: none;
     }
 
-    /* Stack hero buttons vertically */
     .hero__actions {
         flex-direction: column;
         align-items: center;
@@ -1667,7 +1630,6 @@ html, body {
         padding: 14px 24px;
     }
 
-    /* Single column skills */
     .skills__grid {
         grid-template-columns: 1fr;
         gap: 10px;
@@ -1689,7 +1651,6 @@ html, body {
         font-size: .55rem;
     }
 
-    /* Interest cards */
     .interest {
         padding: 28px 20px;
     }
@@ -1702,7 +1663,6 @@ html, body {
         font-size: .78rem;
     }
 
-    /* Project cards */
     .project-card {
         padding: 24px 16px;
     }
@@ -1734,7 +1694,6 @@ html, body {
         padding: 6px 0;
     }
 
-    /* Social cards */
     .social {
         padding: 14px 16px;
         gap: 12px;
@@ -1748,7 +1707,6 @@ html, body {
         font-size: .65rem;
     }
 
-    /* Contact form */
     .contact-form {
         margin: 24px auto;
         gap: 10px;
@@ -1760,7 +1718,6 @@ html, body {
         font-size: .78rem;
     }
 
-    /* Email bar */
     .email-bar {
         padding: 18px 16px;
         gap: 12px;
@@ -1778,7 +1735,6 @@ html, body {
         justify-content: center;
     }
 
-    /* About section title */
     .section__title {
         font-size: 1.1rem;
     }
@@ -1788,7 +1744,6 @@ html, body {
         line-height: 1.85;
     }
 
-    /* Footer */
     .footer {
         padding: 48px 16px 20px;
     }
@@ -1810,7 +1765,6 @@ html, body {
         font-size: .6rem;
     }
 
-    /* Quote section */
     .quote {
         font-size: .78rem;
         padding: 20px 16px;
@@ -1826,14 +1780,12 @@ html, body {
         font-size: .72rem;
     }
 
-    /* Section header */
     .section__header {
         margin-bottom: 32px;
         gap: 14px;
     }
 }
 
-/* Extra small screens (Galaxy Fold, small Android) */
 @media(max-width:360px) {
     .hero__name {
         font-size: 2rem;
@@ -1869,9 +1821,8 @@ html, body {
     }
 }
 
-/* iOS specific fixes */
 @supports (-webkit-touch-callout: none) {
-    /* Safe area for notched iPhones */
+    
     .header {
         padding-top: env(safe-area-inset-top);
     }
@@ -1880,18 +1831,15 @@ html, body {
         padding-bottom: calc(20px + env(safe-area-inset-bottom));
     }
 
-    /* Prevent iOS text zoom */
     body {
         -webkit-text-size-adjust: 100%;
     }
 
-    /* Fix iOS tap highlight */
     a, button {
         -webkit-tap-highlight-color: transparent;
     }
 }
 
-/* Ensure inputs aren't zoomed on iOS (16px min font) */
 @media(max-width:768px) {
     .contact-form input,
     .contact-form textarea {
