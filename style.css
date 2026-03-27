@@ -1,3 +1,15 @@
+
+:root {
+    --bg: #050505;
+    --bg-tint: #0a0a0a;
+    --text: #ffffff;
+    --text-muted: #a1a1aa;
+    --text-dim: #71717a;
+    --border: #27272a;
+    --border-hover: #52525b;
+    --primary: #ffffff;
+    --primary-inv: #000000;
+}
 *,
 *::before,
 *::after {
@@ -16,8 +28,8 @@ html {
 
 body {
     font-family: 'Inter', -apple-system, sans-serif;
-    background: #fff;
-    color: #111;
+    background: var(--bg);
+    color: var(--text);
     line-height: 1.7;
     overflow-x: hidden;
     width: 100%;
@@ -47,7 +59,7 @@ button {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1.5px solid #fff;
+    border: 1.5px solid var(--primary);
     transform: translate(-50%, -50%);
     transition: width .4s cubic-bezier(.25, 1, .5, 1),
         height .4s cubic-bezier(.25, 1, .5, 1),
@@ -56,7 +68,7 @@ button {
         opacity .3s,
         border-radius .4s cubic-bezier(.25, 1, .5, 1),
         border-width .3s;
-    mix-blend-mode: difference;
+    mix-blend-mode: exclusion;
     left: -80px;
     top: -80px;
     display: flex;
@@ -98,8 +110,8 @@ button {
     font-weight: 700;
     letter-spacing: .14em;
     text-transform: uppercase;
-    color: #fff;
-    mix-blend-mode: difference;
+    color: var(--primary-inv);
+    mix-blend-mode: exclusion;
     opacity: 0;
     transform: scale(.6);
     transition: opacity .3s, transform .3s cubic-bezier(.25, 1, .5, 1);
@@ -119,8 +131,8 @@ button {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #fff;
-    mix-blend-mode: difference;
+    background: var(--bg);
+    mix-blend-mode: exclusion;
     transform: translate(-50%, -50%);
     left: -80px;
     top: -80px;
@@ -221,31 +233,31 @@ button {
 }
 
 .btn--primary {
-    background: #111;
-    color: #fff;
+    background: var(--primary);
+    color: var(--primary-inv);
 }
 
 .btn--primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, .15), 0 4px 12px rgba(0, 0, 0, .08);
+    box-shadow: 0 10px 40px rgba(255, 255, 255, .08), 0 4px 12px rgba(255, 255, 255, .03);
 }
 
 .btn--ghost {
     background: transparent;
-    color: #111;
-    border: 1.5px solid #111;
+    color: var(--text);
+    border: 1.5px solid var(--primary);
 }
 
 .btn--ghost:hover {
-    background: #111;
-    color: #fff;
+    background: var(--primary);
+    color: var(--primary-inv);
     transform: translateY(-3px);
     box-shadow: 0 8px 28px rgba(0, 0, 0, .1);
 }
 
 .btn--white {
-    background: #fff;
-    color: #111;
+    background: var(--bg);
+    color: var(--text);
 }
 
 .btn--white:hover {
@@ -258,16 +270,16 @@ button {
     inset: 0 0 auto;
     z-index: 900;
     height: 72px;
-    background: rgba(255, 255, 255, .92);
+    background: rgba(5, 5, 5, .8);
     backdrop-filter: blur(18px) saturate(180%);
     -webkit-backdrop-filter: blur(18px) saturate(180%);
-    border-bottom: 1px solid rgba(0, 0, 0, .05);
+    border-bottom: 1px solid rgba(255, 255, 255, .05);
     transition: box-shadow .4s, background .4s;
 }
 
 .header.scrolled {
-    box-shadow: 0 1px 30px rgba(0, 0, 0, .06);
-    background: rgba(255, 255, 255, .97);
+    box-shadow: 0 1px 30px rgba(0, 0, 0, .5);
+    background: rgba(5, 5, 5, .95);
 }
 
 .header__inner {
@@ -300,7 +312,7 @@ button {
     letter-spacing: .16em;
     text-transform: uppercase;
     line-height: 1.35;
-    color: #111;
+    color: var(--text);
 }
 
 .header__nav {
@@ -313,7 +325,7 @@ button {
     font-weight: 700;
     letter-spacing: .15em;
     text-transform: uppercase;
-    color: #bbb;
+    color: var(--text-dim);
     padding: 4px 0;
     position: relative;
     transition: color .25s;
@@ -321,7 +333,7 @@ button {
 
 .header__link.active,
 .header__link:hover {
-    color: #111;
+    color: var(--text);
 }
 
 .header__link::after {
@@ -331,7 +343,7 @@ button {
     left: 0;
     right: 0;
     height: 2px;
-    background: #111;
+    background: var(--primary);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform .35s cubic-bezier(.4, 0, .2, 1);
@@ -357,7 +369,7 @@ button {
     left: 0;
     width: 100%;
     height: 2px;
-    background: #111;
+    background: var(--primary);
     transition: .3s;
 }
 
@@ -396,7 +408,7 @@ button {
     align-items: center;
     position: relative;
     overflow: hidden;
-    background: #fafafa;
+    background: var(--bg-tint);
 }
 
 .hero::before {
@@ -460,7 +472,7 @@ button {
     font-weight: 600;
     letter-spacing: .1em;
     text-transform: uppercase;
-    color: #aaa;
+    color: var(--text-dim);
     margin-bottom: 16px;
 }
 
@@ -477,7 +489,7 @@ button {
     line-height: .94;
     letter-spacing: -.04em;
     margin-bottom: 26px;
-    background: linear-gradient(90deg, #111 0%, #333 40%, #111 60%, #555 80%, #111 100%);
+    background: linear-gradient(90deg, #fff 0%, #a1a1aa 40%, #fff 60%, #71717a 80%, #fff 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
@@ -487,7 +499,7 @@ button {
 
 .dot {
     display: inline-block;
-    -webkit-text-fill-color: #111;
+    -webkit-text-fill-color: var(--text);
     animation: dotBounce 2.8s ease-in-out infinite;
 }
 
@@ -505,7 +517,7 @@ button {
 
 .hero__tagline {
     font-size: .95rem;
-    color: #555;
+    color: var(--text-muted);
     line-height: 1.85;
     margin-bottom: 10px;
     max-width: 500px;
@@ -513,7 +525,7 @@ button {
 
 .hero__sub {
     font-size: .85rem;
-    color: #aaa;
+    color: var(--text-dim);
     font-style: italic;
     margin-bottom: 32px;
     max-width: 460px;
@@ -534,12 +546,12 @@ button {
     position: relative;
     width: 320px;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, .08), 0 8px 20px rgba(0, 0, 0, .04);
+    box-shadow: 0 20px 60px rgba(255, 255, 255, .03), 0 8px 20px rgba(255, 255, 255, .02);
     transition: box-shadow .5s cubic-bezier(.4, 0, .2, 1);
 }
 
 .hero__frame:hover {
-    box-shadow: 0 30px 80px rgba(0, 0, 0, .14), 0 10px 30px rgba(0, 0, 0, .06);
+    box-shadow: 0 30px 80px rgba(255, 255, 255, .05), 0 10px 30px rgba(0, 0, 0, .5);
 }
 
 .hero__img {
@@ -559,8 +571,8 @@ button {
     position: absolute;
     top: 14px;
     left: 0;
-    background: #111;
-    color: #fff;
+    background: var(--primary);
+    color: var(--primary-inv);
     font-size: .68rem;
     font-weight: 800;
     letter-spacing: .1em;
@@ -572,8 +584,8 @@ button {
     position: absolute;
     bottom: 0;
     right: 0;
-    background: #111;
-    color: #fff;
+    background: var(--primary);
+    color: var(--primary-inv);
     font-size: .62rem;
     font-weight: 600;
     letter-spacing: .14em;
@@ -587,14 +599,14 @@ button {
     left: 16px;
     width: 100%;
     height: 100%;
-    border: 2px solid #ddd;
+    border: 2px solid var(--border);
     z-index: -1;
     transition: transform .4s cubic-bezier(.34, 1.56, .64, 1), border-color .4s;
 }
 
 .hero__portrait:hover .hero__frame-accent {
     transform: translate(4px, 4px);
-    border-color: #bbb;
+    border-color: var(--text-dim);
 }
 
 .hero__scroll {
@@ -606,7 +618,7 @@ button {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    color: #ccc;
+    color: var(--border-hover);
     font-size: .56rem;
     font-weight: 700;
     letter-spacing: .22em;
@@ -625,7 +637,7 @@ button {
 .hero__scroll-ball {
     width: 2px;
     height: 10px;
-    background: #111;
+    background: var(--primary);
     border-radius: 1px;
     position: absolute;
     top: -10px;
@@ -647,7 +659,7 @@ button {
 }
 
 .section--tinted {
-    background: #fafafa;
+    background: var(--bg-tint);
 }
 
 .section__header {
@@ -662,13 +674,13 @@ button {
     font-family: 'Space Mono', monospace;
     font-size: .7rem;
     font-weight: 700;
-    color: #ccc;
+    color: var(--border-hover);
     letter-spacing: .08em;
     transition: color .3s;
 }
 
 .section:hover .section__num {
-    color: #999;
+    color: var(--text-dim);
 }
 
 .section__title {
@@ -686,7 +698,7 @@ button {
 .section__intro {
     max-width: 600px;
     font-size: .88rem;
-    color: #999;
+    color: var(--text-dim);
     margin: 0 auto 44px;
     text-align: center;
     line-height: 1.8;
@@ -703,13 +715,13 @@ button {
 
 .about__text p {
     font-size: .92rem;
-    color: #555;
+    color: var(--text-muted);
     margin-bottom: 18px;
     line-height: 2;
 }
 
 .about__text p strong {
-    color: #111;
+    color: var(--text);
     font-weight: 700;
 }
 
@@ -724,22 +736,22 @@ button {
     align-items: center;
     gap: 16px;
     padding: 16px 20px;
-    background: #fafafa;
+    background: var(--bg-tint);
     border-left: 3px solid transparent;
     transition: transform .25s cubic-bezier(.34, 1.56, .64, 1), background .2s, border-color .3s;
 }
 
 .fact:hover {
     transform: translateX(6px);
-    background: #f5f5f5;
-    border-left-color: #111;
+    background: var(--border);
+    border-left-color: var(--text);
 }
 
 .fact__icon {
     width: 40px;
     height: 40px;
-    background: #111;
-    color: #fff;
+    background: var(--primary);
+    color: var(--primary-inv);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -750,7 +762,7 @@ button {
 
 .fact:hover .fact__icon {
     transform: scale(1.08) rotate(-4deg);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, .15);
+    box-shadow: 0 4px 14px rgba(255, 255, 255, .08);
 }
 
 .fact__label {
@@ -759,7 +771,7 @@ button {
     font-weight: 700;
     letter-spacing: .12em;
     text-transform: uppercase;
-    color: #bbb;
+    color: var(--text-dim);
 }
 
 .fact strong {
@@ -775,8 +787,8 @@ button {
 }
 
 .skill {
-    background: #fff;
-    border: 1px solid #eee;
+    background: var(--bg);
+    border: 1px solid var(--border);
     padding: 30px 22px;
     position: relative;
     overflow: hidden;
@@ -803,7 +815,7 @@ button {
 }
 
 .skill:hover {
-    box-shadow: 0 16px 48px rgba(0, 0, 0, .07), 0 4px 12px rgba(0, 0, 0, .03);
+    box-shadow: 0 16px 48px rgba(255, 255, 255, .04), 0 4px 12px rgba(255, 255, 255, .01);
     border-color: transparent;
     transform: translateY(-4px);
 }
@@ -811,22 +823,22 @@ button {
 .skill__icon {
     width: 44px;
     height: 44px;
-    border: 1.5px solid #eee;
+    border: 1.5px solid var(--border);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
-    color: #111;
+    color: var(--text);
     margin-bottom: 18px;
     transition: transform .3s cubic-bezier(.34, 1.56, .64, 1), border-color .2s, background .2s, color .2s, box-shadow .3s;
 }
 
 .skill:hover .skill__icon {
     transform: scale(1.12) rotate(-5deg);
-    border-color: #111;
-    background: #111;
-    color: #fff;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, .12);
+    border-color: var(--text);
+    background: var(--primary);
+    color: var(--primary-inv);
+    box-shadow: 0 4px 14px rgba(255, 255, 255, .06);
 }
 
 .skill h3 {
@@ -839,8 +851,8 @@ button {
 
 .skill__level {
     display: inline-block;
-    background: #111;
-    color: #fff;
+    background: var(--primary);
+    color: var(--primary-inv);
     font-size: .6rem;
     font-weight: 700;
     letter-spacing: .05em;
@@ -852,7 +864,7 @@ button {
 
 .skill p {
     font-size: .78rem;
-    color: #888;
+    color: var(--text-dim);
     line-height: 1.7;
 }
 
@@ -865,8 +877,8 @@ button {
 }
 
 .interest {
-    background: #fafafa;
-    border: 1px solid #eee;
+    background: var(--bg-tint);
+    border: 1px solid var(--border);
     padding: 36px 26px;
     position: relative;
     overflow: hidden;
@@ -893,7 +905,7 @@ button {
 }
 
 .interest:hover {
-    box-shadow: 0 16px 48px rgba(0, 0, 0, .06), 0 4px 12px rgba(0, 0, 0, .02);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, .5), 0 4px 12px rgba(0, 0, 0, .02);
     border-color: transparent;
     transform: translateY(-4px);
 }
@@ -901,8 +913,8 @@ button {
 .interest__icon {
     width: 48px;
     height: 48px;
-    background: #111;
-    color: #fff;
+    background: var(--primary);
+    color: var(--primary-inv);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -913,7 +925,7 @@ button {
 
 .interest:hover .interest__icon {
     transform: scale(1.1) rotate(-6deg);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, .15);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, .08);
 }
 
 .interest h3 {
@@ -926,7 +938,7 @@ button {
 
 .interest p {
     font-size: .82rem;
-    color: #777;
+    color: var(--text-muted);
     line-height: 1.85;
 }
 
@@ -936,11 +948,11 @@ button {
     text-align: center;
     font-style: italic;
     font-size: .88rem;
-    color: #999;
+    color: var(--text-dim);
     line-height: 1.9;
     padding: 28px 32px;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
     position: relative;
 }
 
@@ -960,7 +972,7 @@ button {
     display: block;
     text-align: right;
     font-size: .78rem;
-    color: #bbb;
+    color: var(--text-dim);
     font-style: italic;
     margin-top: 12px;
 }
@@ -974,8 +986,8 @@ button {
 }
 
 .project-card {
-    background: #fff;
-    border: 1px solid #eee;
+    background: var(--bg);
+    border: 1px solid var(--border);
     padding: 28px 24px;
     display: flex;
     flex-direction: column;
@@ -1005,7 +1017,7 @@ button {
 }
 
 .project-card:hover {
-    box-shadow: 0 16px 48px rgba(0, 0, 0, .07), 0 4px 12px rgba(0, 0, 0, .03);
+    box-shadow: 0 16px 48px rgba(255, 255, 255, .04), 0 4px 12px rgba(255, 255, 255, .01);
     border-color: transparent;
     transform: translateY(-4px);
 }
@@ -1020,10 +1032,10 @@ button {
     font-family: 'Space Mono', monospace;
     font-size: .65rem;
     font-weight: 700;
-    color: #bbb;
+    color: var(--text-dim);
     width: 36px;
     height: 36px;
-    border: 1.5px solid #ddd;
+    border: 1.5px solid var(--border);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1032,20 +1044,20 @@ button {
 }
 
 .project-card:hover .project-card__num {
-    background: #111;
-    color: #fff;
-    border-color: #111;
+    background: var(--primary);
+    color: var(--primary-inv);
+    border-color: var(--text);
     transform: scale(1.05) rotate(-3deg);
 }
 
 .project-card__github {
     font-size: 1.1rem;
-    color: #bbb;
+    color: var(--text-dim);
     transition: color .2s, transform .3s cubic-bezier(.34, 1.56, .64, 1);
 }
 
 .project-card__github:hover {
-    color: #111;
+    color: var(--text);
     transform: scale(1.15);
 }
 
@@ -1057,7 +1069,7 @@ button {
 
 .project-card p {
     font-size: .8rem;
-    color: #777;
+    color: var(--text-muted);
     line-height: 1.75;
     flex: 1;
 }
@@ -1069,8 +1081,8 @@ button {
 }
 
 .project-card__tags span {
-    background: #f0f0f0;
-    color: #555;
+    background: var(--border);
+    color: var(--text-muted);
     font-size: .62rem;
     font-weight: 700;
     letter-spacing: .04em;
@@ -1079,7 +1091,7 @@ button {
 }
 
 .project-card:hover .project-card__tags span {
-    background: #e8e8e8;
+    background: var(--border-hover);
 }
 
 .project-card__link {
@@ -1087,7 +1099,7 @@ button {
     font-weight: 700;
     letter-spacing: .1em;
     text-transform: uppercase;
-    color: #111;
+    color: var(--text);
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -1113,30 +1125,30 @@ button {
 
 .note {
     font-size: .72rem;
-    color: #aaa;
+    color: var(--text-dim);
     font-style: italic;
     margin-top: 10px;
 }
 
 .note a {
-    color: #888;
+    color: var(--text-dim);
     text-decoration: underline;
 }
 
 .note a:hover {
-    color: #111;
+    color: var(--text);
 }
 
 .fact--download {
     text-decoration: none;
     cursor: none;
-    border: 1px dashed #ddd;
+    border: 1px dashed var(--border);
     transition: transform .25s cubic-bezier(.34, 1.56, .64, 1), background .2s, border-color .3s;
 }
 
 .fact--download:hover {
-    border-color: #111;
-    background: #f0f0f0;
+    border-color: var(--text);
+    background: var(--border);
     transform: translateX(6px);
 }
 
@@ -1167,10 +1179,10 @@ button {
     padding: 14px 18px;
     font-family: 'Inter', sans-serif;
     font-size: .82rem;
-    border: 1.5px solid #ddd;
+    border: 1.5px solid var(--border);
     border-radius: 2px;
-    background: #fff;
-    color: #111;
+    background: var(--bg);
+    color: var(--text);
     outline: none;
     transition: border-color .2s;
     cursor: none;
@@ -1178,12 +1190,12 @@ button {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #111;
+    border-color: var(--text);
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: #bbb;
+    color: var(--text-dim);
 }
 
 .contact-form textarea {
@@ -1204,19 +1216,19 @@ button {
     align-items: center;
     gap: 16px;
     padding: 16px 20px;
-    background: #fafafa;
+    background: var(--bg-tint);
     border-left: 3px solid transparent;
     transition: transform .25s cubic-bezier(.34, 1.56, .64, 1), background .2s, border-color .3s;
 }
 
 .social:hover {
     background: #f2f2f2;
-    border-left-color: #111;
+    border-left-color: var(--text);
 }
 
 .social>i:first-child {
     font-size: 1.2rem;
-    color: #111;
+    color: var(--text);
     width: 22px;
     text-align: center;
     transition: transform .3s cubic-bezier(.34, 1.56, .64, 1);
@@ -1234,19 +1246,19 @@ button {
 
 .social span {
     font-size: .7rem;
-    color: #999;
+    color: var(--text-dim);
 }
 
 .social__arrow {
     margin-left: auto;
     font-size: .6rem;
-    color: #ccc;
+    color: var(--border-hover);
     transition: transform .3s cubic-bezier(.34, 1.56, .64, 1), color .2s;
 }
 
 .social:hover .social__arrow {
     transform: translate(3px, -3px);
-    color: #111;
+    color: var(--text);
 }
 
 .email-bar {
@@ -1257,7 +1269,7 @@ button {
     background: linear-gradient(135deg, #111, #222, #111);
     background-size: 200% 200%;
     animation: gradientSlide 6s ease infinite;
-    color: #fff;
+    color: var(--primary-inv);
     max-width: 1100px;
     margin: 0 auto;
     transition: transform .25s cubic-bezier(.34, 1.56, .64, 1), box-shadow .3s;
@@ -1265,7 +1277,7 @@ button {
 
 .email-bar:hover {
     transform: translateY(-3px);
-    box-shadow: 0 14px 50px rgba(0, 0, 0, .15);
+    box-shadow: 0 14px 50px rgba(255, 255, 255, .08);
 }
 
 .email-bar>i {
@@ -1290,7 +1302,7 @@ button {
 .email-bar__address {
     font-size: .9rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--primary-inv);
     transition: opacity .2s;
 }
 
@@ -1300,8 +1312,8 @@ button {
 
 .footer {
     padding: 80px 48px 30px;
-    background: #fff;
-    border-top: 1px solid #eee;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
 }
 
 .footer__brand {
@@ -1330,9 +1342,9 @@ button {
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 20px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--border);
     font-size: .72rem;
-    color: #bbb;
+    color: var(--text-dim);
     letter-spacing: .03em;
 }
 
@@ -1342,7 +1354,7 @@ button {
 }
 
 .footer__links a {
-    color: #bbb;
+    color: var(--text-dim);
     font-weight: 600;
     letter-spacing: .06em;
     text-transform: uppercase;
@@ -1350,7 +1362,7 @@ button {
 }
 
 .footer__links a:hover {
-    color: #111;
+    color: var(--text);
 }
 
 .reveal {
@@ -1425,7 +1437,7 @@ html, body {
     }
 
     .hero__name {
-        background: #111;
+        background: var(--primary);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
