@@ -1,39 +1,70 @@
-# Hey, I'm Sourabh 👋
+# Sourabh Sharma | Full-Stack Developer 🚀
 
-I'm a self-taught Full-Stack Developer from Gurgaon, Haryana, India. I specialize in building and deploying production-ready applications from scratch using modern web technologies like Next.js, React, TypeScript, and Supabase. 
+![Portfolio Preview](https://img.shields.io/badge/Portfolio-Live_Site-0A66C2?style=for-the-badge&logo=googlechrome&logoColor=white)
+![Build](https://img.shields.io/badge/Build-Production--Ready-success?style=for-the-badge)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-I didn't do a bootcamp. Everything I know comes from reading docs, hands-on projects, CS50 (Harvard), and leveraging AI tools like Claude, Gemini, and Codex to accelerate development. I'm all about writing clean, efficient, and scalable code.
+This repository contains the source code for my personal portfolio website, hosted at **[xsourabhsharma.github.io](https://xsourabhsharma.github.io)**. 
 
-## 🛠️ What I'm working with
-
-- **Frontend:** Next.js (App Router), React, HTML5, CSS3, Tailwind CSS
-- **Backend & DB:** REST APIs, Server Actions, Supabase, Drizzle ORM, PostgreSQL
-- **Languages:** JavaScript, TypeScript, Python, Java, C/C++
-- **Tools:** Git, GitHub, Vercel, AI Assistants (Claude, Gemini, Codex)
-
-## 🚀 Projects & Code
-
-### [Track My Money](https://trackmymoney-khaki.vercel.app)
-A full-stack personal finance dashboard to monitor income, expenses, and financial health. Features an "Intelligence Hub" for spending insights and AI-based bank statement parsing.
-*Built with: Next.js, React, TypeScript, Supabase, Drizzle ORM, Tailwind CSS, OpenAI/Groq*
-
-### [WebGem](https://powerful-website-umber.vercel.app)
-A curated web tools directory featuring 160+ tools across 16+ categories. Includes advanced filtering, saved tools, and validation scripts for data quality.
-*Built with: Next.js 15, React 19, TypeScript, Tailwind CSS*
-
-## 🧠 When I'm Not Coding
-- **AI/ML Applications:** Exploring how machine learning can solve real problems.
-- **Personal Finance Systems:** Building tools for financial literacy and better cash flow tracking.
-- **Books & Self Growth:** Reading about tech, money, and self-improvement to shift my perspective.
-- **Investing & Markets:** Studying charts, following trends, and understanding how money moves.
-
-## 🌐 Find me online
-
-- **Website:** [xsourabhsharma.github.io](https://xsourabhsharma.github.io)
-- **Email:** sourabhsharmacrypto@gmail.com
-- **LinkedIn:** [Sourabh Sharma](https://www.linkedin.com/in/xsourabhsharma)
-- **X (Twitter):** [@xsourabhsharma](https://x.com/xsourabhsharma)
-- **GitHub:** [xsourabhsharma](https://github.com/xsourabhsharma)
+Designed and developed from scratch, this site serves as a central hub for my projects, technical skills, and professional journey as a self-taught full-stack developer.
 
 ---
-*I think in years, not days. Every book I read, every line of code I write, every mistake I make. It all adds up somewhere. I'm just trying to make sure it adds up to something meaningful.*
+
+## 👨‍💻 About Me
+
+I am a self-taught **Full-Stack Developer** based in Gurgaon, India, with a strong focus on building production-ready applications using modern web technologies. My approach is project-driven, leveraging AI tools to accelerate development cycles and solve complex problems efficiently.
+
+- 🌍 **Location:** Gurgaon, Haryana, India
+- 🚀 **Specialization:** Next.js, React, TypeScript, and Supabase
+- 🧠 **Philosophy:** "Vibe coding" — building and shipping complete products solo using AI as a force multiplier.
+- 🎓 **Certification:** CS50: Introduction to Computer Science (Harvard)
+
+---
+
+## 🛠️ Tech Stack & Features
+
+### Core Technologies
+- **Frontend:** HTML5, CSS3, Vanilla JavaScript
+- **Aesthetics:** Custom CSS Animations, 3D Tilt Cards, Smooth Scroll Reveals
+- **Interactivity:** Dynamic Tech Cursor, Magnetic Buttons, Formspree Integration
+
+### Key Website Features
+- **Responsive Design:** Optimized for every screen size, from mobile to ultra-wide displays.
+- **Project Showcase:** Live integration with my GitHub repositories (Aura-Grid, TrackMyMoney, WebGem).
+- **Interactive UI:** Smooth transitions and high-performance animations powered by standard web APIs.
+- **SEO Optimized:** Metadata and structured data (JSON-LD) for better search visibility.
+
+---
+
+## 📁 Repository Structure
+
+```text
+xsourabhsharma.github.io/
+├── img/                # Visual assets and portrait
+├── LICENSE             # MIT License
+├── README.md           # Professional Profile
+├── index.html          # Main Entry Point (HTML5)
+├── script.js           # Interactive Logic (Vanilla JS)
+└── style.css           # Modern Styling (CSS3)
+```
+
+---
+
+## 🚀 Local Development
+
+To run this project locally:
+
+1. **Clone the Repo:**
+   ```bash
+   git clone https://github.com/xsourabhsharma/xsourabhsharma.github.io.git
+   ```
+2. **Open in Browser:**
+   Simply open `index.html` in any modern web browser or use a "Live Server" extension.
+
+---
+
+## 📜 License
+This project is licensed under the **MIT License**.
+
+---
+*Maintained with 🧡 by [xsourabhsharma](https://github.com/xsourabhsharma)*
